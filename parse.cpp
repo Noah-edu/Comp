@@ -1,6 +1,11 @@
 #include "lex.hpp"
 #include <iostream>
 
+struct varBuf
+{
+	std::vector<const std::string> variables;
+};
+
 std::vector<unsigned int> opBuff;
 
 unsigned int T_Pos = 0;
@@ -15,17 +20,37 @@ void opBuffGen()
 }
 
 
-int type(unsigned int offset);
+int valExpr();
+
+int type();
 
 int variable()
 {
-//	int left = 
+	
+	if(type() == 99)
+	{
+		variables.push_back(tokenBuff[T_Pos]);
+	}
+
+	switch()
+	{
+
+
+	}
 	
 	//Add code generation
 	T_Pos += 1;
 	return 99; 
 }
 
+
+
+
+int valExpr()
+{
+
+
+}
 
 //TODO 
 //- PAY MIND TO THIS FUNCTION
